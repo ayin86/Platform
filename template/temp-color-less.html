@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel='stylesheet/less' type='text/css' href='../lib/style/css/common.less'/>
+<style type="text/css">
+.test{position: absolute; top:20%; bottom:20%; right:20%; left:20%;}
+</style>
+<style type="text/less">
+
+@basered:#ff0000;
+@red:lighten(@basered,10%);   //lighten明度,fade透明度 
+//@red:saturate(@basered,-40%);
+@orange:spin(@red,30);
+@yellow:spin(@red,60);
+@chartreuse:spin(@red,90);
+@green:spin(@red,120);
+@aquamarine:spin(@red,150);
+@cyan:spin(@red,180);
+@blue:spin(@red,210);
+@indigo:spin(@red,240);
+@purple:spin(@red,270);
+@pink:spin(@red,300);
+@violetred:spin(@red,330);
+
+/*
+ 　1、三种原色：1、红（red）；2、黄（yellow）；3、蓝（blue）；
+2、三种二次色：4、橙（orange）；5、绿（green）；6、紫（violet）
+3、六种三次色：7、朱红（vermilion）；8、琥珀（amber）；9、黄绿（chartreuse）；10、碧绿（aquamarine）；11、靛青（indigo）；12、紫红（violet red）。
+ * */
+
+.test-warp{ 
+  li{ width: 10rem;height:10rem; float: left; margin:1rem; list-style: none; border-radius:5px; padding:1rem; text-align: center; color:#fff; font-size: 1.4rem; text-shadow: 1px 1px 1px rgba(0,0,0,.5);}
+  .test01{background-color:@red;}
+  .test02{background-color:@orange;}
+  .test03{background-color:@yellow;}
+  .test04{background-color:@chartreuse;}
+  .test05{background-color:@green;}
+  .test06{background-color:@aquamarine;}
+  .test07{background-color:@cyan;}
+  .test08{background-color:@blue;}
+  .test09{background-color:@indigo;}
+  .test10{background-color:@purple;}
+  .test11{background-color:@pink;}
+  .test12{background-color:@violetred;}
+}
+</style>
+</head>
+<body id="test" onload="">
+  <ul class="test-warp">
+      <li class="test01">red</li>
+      <li class="test02">orange</li>
+      <li class="test03">yellow</li>
+      <li class="test04">chartreuse</li>
+      <li class="test05">green</li>
+      <li class="test06">aquamarine</li>
+      <li class="test07">cyan</li>
+      <li class="test08">blue</li>
+      <li class="test09">indigo</li>
+      <li class="test10">purple</li>
+      <li class="test11">pink</li>
+      <li class="test12">violetred</li>
+  </ul>
+</body>
+</html>
+<script src="../lib/init/loadFiles-after.js"></script>

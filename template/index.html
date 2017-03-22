@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src="../lib/init/loadFiles.js"></script>
+<style type="text/css">
+</style>
+<style type="text/less">
+</style>
+</head>
+<body class="">
+    <div class="ui-fullmask">
+        <div class="ui-fullmask-desc">
+            <p><i class="fa fa-exclamation-circle"></i></p>
+            <h1>浏览器窗口过小</h1>
+            <p>浏览器窗口过小，请放大浏览器窗口或者最大化，最小分辨率1024px*768px</p>
+        </div>
+    </div>
+    <div class="ui-main">
+        <div class="ui-header">
+            <div class="ui-restore"><i class="icomoon icomoon-shrink"></i></div>
+            <div class="ui-header-inner">
+                <ul class="ui-assist">
+                   <li class="ui-search">
+                       <input type="text" class="ui-search-input" placeholder="请输入关键字..."/>
+                       <button class="ui-search-btn"><i class="fa fa-search"></i></button>
+                   </li>
+                   <li role="presentation" class="dropdown ui-profile">
+                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                       <img src="../lib/style/images/head/header.jpg" alt="">
+                       <span class="name">Admin</span>
+                    </a>
+                    <ul id="menu1" class="dropdown-menu" aria-labelledby="drop1">
+                      <li class="disable"><a href="#"><i class="fa fa-user"></i> 个人资料(禁用)</a></li>
+                      <li><a href="#"><i class="fa fa-shield"></i> 安全</a></li>
+                      <li><a href="#"><i class="fa fa-puzzle-piece"></i> 个性化</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#"><i class="fa fa-sign-out"></i> 注销</a></li>
+                    </ul>
+                   </li> 
+                   
+                   <li role="presentation" class="dropdown ui-message">
+                       <a id="drop2" href="#" class="dropdown-toggle ui-message" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                           <i class="fa fa-bell-o animated"></i>
+                           <span class="desc">28</span>
+                           <span class="badge bg-major">3</span>
+                       </a>
+                       <ul id="menu2" class="dropdown-menu" aria-labelledby="drop2">
+                          <li><a href="#">通知 <span class="badge bg-notify">15</span></a></li>
+                          <li><a href="#">警告 <span class="badge bg-warning">2</span></a></li>
+                          <li><a href="#">次要 <span class="badge bg-minor">0</span></a></li>
+                          <li><a href="#">主要 <span class="badge bg-major">8</span></a></li>
+                          <li><a href="#">严重 <span class="badge bg-fatal">3</span></a></li>
+                          <li role="separator" class="divider"></li>
+                          <li class="close-alarm"><a href="#"><i class="fa fa-bell-slash-o"></i> 关闭提示</a></li>
+                        </ul>
+                        <div class="tooltip tooltip-message bottom" role="tooltip">
+                          <div class="tooltip-arrow"></div>
+                          <div class="tooltip-inner">
+                            有新提醒！
+                          </div>
+                        </div>
+                   </li> 
+                   <li role="presentation" class="dropdown">
+                    <a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-navicon"></i>
+                    </a>
+                    <ul id="menu3" class="dropdown-menu dropdown-menu-right" aria-labelledby="drop3">
+                      <li><a href="#"><i class="fa fa-gears"></i> 门户参数</a></li>
+                      <li onclick="themeLoad(this);" class="floater-entrance-common"><a href="#"><i class="fa fa-heart"></i> 主题设置</a></li>
+                      <li><a href="#"><i class="fa fa-th"></i> 编辑布局</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#"><i class="fa fa-power-off"></i> 退出系统</a></li>
+                    </ul>
+                  </li>
+                   
+                   <li class="ui-maximize" >
+                       <a href="#"><i class="icomoon icomoon-enlarge"></i></a>
+                   </li> 
+                   
+                </ul>
+            </div>
+        </div>
+        <div class="ui-side">
+            <div class="nav-show" data-toggle="tooltip" data-placement="right" title="显示导航"><i class="fa fa-chevron-circle-right"></i></div>
+            <div class="ui-side-inner">
+                <div class="ui-logo-wrap">
+                    <img src="../lib/style/images/logo.png" class="ui-logo" alt="" />
+                    <ul class="logo-button">
+                        <li class="logo-info"><i class="fa fa-info-circle"></i></li>
+                        <li data-toggle="tooltip" data-placement="right" title="关闭提示声音" class="sound-switch"><i class="fa fa-volume-up"></i></li>
+                        <li data-toggle="tooltip" data-placement="right" title="隐藏导航" class="nav-hide"><i class="fa fa-chevron-circle-left"></i></li>
+                    </ul>
+                    <div class="tooltip tooltip-logo bottom" role="tooltip">
+                      <div class="tooltip-arrow"></div>
+                      <div class="tooltip-inner">
+                        <p>东华软件</p>
+                        <p>网络管理系统</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="jstree-menu"></div>
+            </div>
+        </div>
+        <div class="ui-content">
+            <div class="ui-content-inner">
+                <div class="row row-master">
+                    <div class="col-lg-9 col-maincont"><!--主要模块-->
+                        <div class="row row-statebox"><!--信息盒-->
+                            <div class="col-md-2 col-sm-2">
+                                <div class="statebox" data-toggle="tooltip" data-placement="bottom" title="任务">
+                                    <i class="lnr lnr-list"></i>
+                                    <h3>20 <span class="num-minus">-1</span></h3>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div class="statebox" data-toggle="tooltip" data-placement="bottom" title="赞">
+                                    <i class="lnr lnr-heart"></i>
+                                    <h3>329 <span class="num-minus">+3</span></h3>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div class="statebox" data-toggle="tooltip" data-placement="bottom" title="云文件">
+                                    <i class="lnr lnr-cloud"></i>
+                                    <h3>35</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div class="statebox" data-toggle="tooltip" data-placement="bottom" title="信息">
+                                    <i class="lnr lnr-bubble"></i>
+                                    <h3>152</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div class="statebox" data-toggle="tooltip" data-placement="bottom" title="文件池">
+                                    <i class="lnr lnr-inbox"></i>
+                                    <h3>35 <span class="num-minus">-3</span></h3>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <div class="statebox" data-toggle="tooltip" data-placement="bottom" title="数据库">
+                                    <i class="lnr lnr-database"></i>
+                                    <h3>320</h3>
+                                </div>
+                            </div>
+                        </div><!--信息盒 end-->
+                        <div class="row row-charts">
+                            <div class="col-xs-12 ">
+                                <div class="panel"  id="chart-stati" style="height:250px;"></div>
+                            </div>
+                        </div>
+                        <div class="row row-charts">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="panel">
+                                    <div class="panel-heading">任务进度</div>
+                                    <div class="panel-body">
+                                        <ul class="process-wrap">
+                                            <li>
+                                                <div class="desc">磁盘碎片整理</div>
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-blue-lr" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="desc">物资采购</div>
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-blue-l" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;">89%</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="desc">网络带宽优化</div>
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">75%</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="desc">线路整理</div>
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-blue-d" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">35%</div>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="panel panel-datatype">
+                                    <div class="canvas-wrap" id="chart-datatype"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="panel panel-bandwidth">
+                                    <div class="canvas-wrap" id="chart-bandwidth"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="panel panel-toolbox">
+                                    <div class="panel-heading">便捷工具</div>
+                                    <div class="panel-body">
+                                        <ul class="toolbox row">
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-address-book-o"></i>
+                                                <span class="desc">通讯录</span>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-tasks"></i>
+                                                <span class="desc">待办工作</span>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-envelope-o"><span class="badge bg-major">3</span></i>
+                                                <span class="desc">Email</span>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-map-o"></i>
+                                                <span class="desc">地图</span>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-newspaper-o"></i>
+                                                <span class="desc">新闻</span>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-sticky-note-o"></i>
+                                                <span class="desc">便签</span>
+                                            </li>
+                                            <li class="col-xs-4">
+                                                <i class="fa fa-comments-o"><span class="badge bg-major">21</span></i>
+                                                <span class="desc">及时通讯</span>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-12 col-sm-12">
+                                <div class="panel">
+                                    <div class="canvas-wrap" id="chart-top100"></div>
+                                </div>
+                            </div>
+                            
+                        </div><!--row chart end-->
+                        <div class="row row-charts">
+                            <div class="col-xs-12 ">
+                                <div  class="panel" id="chart-map" style="height:600px;"></div>
+                            </div>
+                        </div>
+                    </div><!--主要模块 end-->
+                    <div class="col-lg-3 col-sidecont"><!--侧边信息栏-->
+                        <div class="panel">
+                            <div class="panel-heading">设备日志</div>
+                            <div class="panel-body">
+                                <ul class="logbook">
+                                    <li>
+                                        <i class="fa fa-server bg-major"></i>
+                                        <p class="desc"><i class="thl">服务器XS012</i>宕机重启,请及时排除故障</p>
+                                        <p class="time">10分钟前</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-database bg-minor"></i>
+                                        <p class="desc"><i class="thl">SQL数据库</i>10.1.2.10 数据异常</p>
+                                        <p class="time">13分钟前</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-thermometer-4 bg-minor"></i>
+                                        <p class="desc"><i class="thl">一号机房</i>温度40C，请检查空调。</p>
+                                        <p class="time">35分钟前</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bolt bg-warning"></i>
+                                        <p class="desc"><i class="thl">服务器X32</i>电压不稳定，请检查电源</p>
+                                        <p class="time">1小时前</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-flag bg-notify"></i>
+                                        <p class="desc"><i class="thl">日常检查</i>请进行磁盘碎片整理</p>
+                                        <p class="time">1小时23分钟前</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-calendar bg-normal"></i>
+                                        <p class="desc"><i class="thl">日常检查</i>一切正常，未发现问题</p>
+                                        <p class="time">1小时36分钟前</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <i class="fa fa fa-fire bg-normal"></i>
+                                        <p class="desc"><i class="thl">日常检查</i>防火报警器工作正常</p>
+                                        <p class="time">2小时44分钟前</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="panel">
+                            <div class="panel-heading">提醒事项</div>
+                            <div class="panel-body">
+                              <div class="add-task-row">
+                                  <a class="btn btn-success btn-sm pull-left" >新增任务</a>
+                                  <a class="btn btn-default btn-sm pull-right" >查看所有任务</a>
+                              </div>
+                              <div class="task-content">
+                                  <ul class="task-list">
+                                      <li class="task-done">
+                                          <input class="checkbox" type="checkbox" checked="checked" class="list-child" value="">
+                                          <div class="task-title">
+                                              <span class="desc">整理服务器文件夹</span>
+                                              <span class="badge bg-cyan">完成</span>
+                                          </div>
+                                          <div class="task-btn">
+                                              <button class="btn btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-xs"><i class="fa fa-trash-o "></i></button>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <input class="checkbox" type="checkbox" class="list-child" value="">
+                                          <div class="task-title">
+                                              <span class="desc">联系网络运营商，解决数据丢包的问题</span>
+                                              <span class="badge bg-green">明天</span>
+                                          </div>
+                                          <div class="task-btn">
+                                              <button class="btn btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-xs"><i class="fa fa-trash-o "></i></button>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <input class="checkbox" type="checkbox" class="list-child" value="">
+                                          <div class="task-title">
+                                              <span class="desc">起草招聘工程师信息</span>
+                                              <span class="badge bg-orange">下月</span>
+                                          </div>
+                                          <div class="task-btn">
+                                              <button class="btn btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-xs"><i class="fa fa-trash-o "></i></button>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <input class="checkbox" type="checkbox" class="list-child" value="">
+                                          <div class="task-title">
+                                              <span class="desc">解决ST021服务器，链路不稳定的问题</span>
+                                              <span class="badge bg-green">两天后</span>
+                                          </div>
+                                          <div class="task-btn">
+                                              <button class="btn btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-xs"><i class="fa fa-trash-o "></i></button>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <input class="checkbox" type="checkbox" class="list-child" value="">
+                                          <div class="task-title">
+                                              <span class="desc">调整站点css样式</span>
+                                              <span class="badge bg-orange">下周</span>
+                                          </div>
+                                          <div class="task-btn">
+                                              <button class="btn btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-xs"><i class="fa fa-trash-o "></i></button>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <input class="checkbox" type="checkbox" class="list-child" value="">
+                                          <div class="task-title">
+                                              <span class="desc">解决服务器文件压缩问题</span>
+                                              <span class="badge bg-orange">下周</span>
+                                          </div>
+                                          <div class="task-btn">
+                                              <button class="btn btn-xs"><i class="fa fa-pencil"></i></button>
+                                              <button class="btn btn-xs"><i class="fa fa-trash-o "></i></button>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+
+                              
+                          </div>
+                        </div>
+                        
+                        <div id='calendar'></div>
+                        
+                    </div><!--侧边信息栏 end-->
+                </div><!--row row-master end-->
+            </div><!--ui-content-inner end-->
+        </div><!--ui-content end-->
+    </div><!--ui-main end-->
+    
+</body>
+</html>
+
+
+<script>
+/*
+$.AllInOne({
+    onload:function(){},
+    from:"sub-content-home2.html",
+    obj:".row-home",
+    to:".ui-content-inner"
+});
+*/
+function sidecol(){
+  $.timer.set("sidecol",function(){  
+    $(".col-sidecont").height(0);
+    $(".col-sidecont").innerHeight($(".row-master").height());
+  },300);
+}
+sidecol();
+function fullmask(){
+ $.timer.set("fullmask",function(){  
+   if($(window).height()<600||$(window).width()<1000){
+       $(".ui-fullmask").addClass("ui-show");
+   }else{
+       $(".ui-fullmask").removeClass("ui-show");
+   } 
+ },300);
+}
+$(window).resize(function(){
+       fullmask();
+       sidecol();
+});
+
+
+
+var voluble={
+    click : new Audio("../lib/style/sound/ping.wav"),
+    minimize : new Audio("../lib/style/sound/minimize.wav"),
+    restore : new Audio("../lib/style/sound/restore.wav"),
+    tip : new Audio("../lib/style/sound/ballon.wav"),
+    menu : new Audio("../lib/style/sound/menupopup.wav"),
+    funk : new Audio("../lib/style/sound/funk.wav"),
+    alert : new Audio("../lib/style/sound/alert.wav"),
+    alarm : new Audio("../lib/style/sound/alarm.wav"),
+    mute : new Audio("../lib/style/sound/silence.wav")
+}
+
+var mute={
+    click : voluble.mute,
+    minimize : voluble.mute,
+    restore : voluble.mute,
+    tip : voluble.mute,
+    menu: voluble.mute,
+    funk : voluble.mute,
+    alert: voluble.mute,
+    alarm : voluble.mute
+}
+var sound=mute;
+$(".sound-switch").click(function(){
+   if($(this).find(".fa").hasClass("fa-volume-up")){
+       $(this).find(".fa").addClass("fa-volume-off").removeClass("fa-volume-up");
+       $(this).attr("data-original-title","开启声音");
+       sound=mute;
+   }else{
+       $(this).find(".fa").addClass("fa-volume-up").removeClass("fa-volume-off");
+       $(this).attr("data-original-title","关闭提示声音");
+       sound=voluble;
+       sound.alert.play();
+   }
+});
+  
+
+$(function () {
+  fullmask();
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  $('.jstree-menu').jstree({
+        'core' : {
+            "animation" : 300,
+            'data' : [
+                {"text":"工作台","icon":"fa fa-dashboard",'state' : { 'selected' : true }},
+                { "text":"虚拟化监控","icon":"fa fa-desktop",'state' : { 'opened' : false},"children":[
+                        { "text" : "视频监控" },
+                        { "text" : "网络链路监控" }
+                ]},
+                { "text":"告警管理","icon":"fa fa-exclamation-triangle",'state' : { 'opened' : false},"children":[
+                        { "text" : "链路故障告警","children" : [
+                        { "text" : "主链路告警"},
+                        { "text" : "次级链路告警" }
+                ]},
+                        { "text" : "网络故障告警" }
+                ]},
+                { "text":"发布信息查看","icon":"fa fa-eye"},
+                { "text":"应用可用性管理","icon":"fa fa-puzzle-piece"},
+                { "text":"拓扑图","icon":"fa fa-newspaper-o"},
+                { "text":"网络管理","icon":"fa fa-signal"},
+                { "text":"拨测管理","icon":"fa fa-building-o"},
+                { "text":"系统设置","icon":"fa fa-gears"}
+            ]
+        },
+        "types" : {
+        "default" : {
+            "icon":"fa fa-file",
+          "valid_children" : ["default","file"]
+        }
+      },
+        "plugins" : [
+            "contextmenu", "dnd", "search",
+            "state", "types", "wholerow"
+        ]
+    }).bind('select_node.jstree', function (event, data) {  //绑定的点击事件
+        sound.click.play();
+    }).bind('open_node.jstree', function (event, data) {  //绑定的点击事件
+        sound.funk.play();
+    }).bind('close_node.jstree Event', function (event, data) {  //绑定的点击事件
+        sound.funk.play();
+    });
+  
+  $.timer.set("uiSound",function(){
+    sound=voluble;
+    //alert($(".jstree-node").size());
+    $(".dropdown-menu li,.ui-search-btn").click(function(){
+      sound.click.play();
+    });
+    $(".jstree-ocl").click(function(){
+      //sound.funk.play();
+    });
+    $(".logo-info").mouseenter(function(){
+      sound.menu.play();
+    });
+    $(".dropdown-toggle").click(function(){
+      sound.menu.play();
+    });
+  },500);
+  
+  $.timer.set("uiMessage",function(){
+      $(".ui-message .fa-bell-o").addClass("messageSwing");
+      $(".tooltip-message").addClass("tooltip-message-show");
+      sound.alarm.play();
+      $.timer.set("tooltipMessage",function(){
+          $(".tooltip-message").removeClass("tooltip-message-show");
+      },3000)
+  },5000);
+  
+  $(".close-alarm").click(function(){
+      $(".ui-message .fa").removeClass("messageSwing");
+  })
+ 
+})//doc.ready end
+
+$(window).load(function(){
+  //日程安排 初始化js
+var initialLocaleCode ='zh-cn';
+$('#calendar').fullCalendar({
+    header: {
+        left:"",
+        right:"",
+        center: 'title'
+    },
+    footer:{
+        left: 'prev,next today',
+        right: 'listWeek month,agendaWeek,agendaDay'
+    },
+    locale: initialLocaleCode,
+    height:500,
+    //defaultDate: '2017-02-12',
+    navLinks: true, // can click day/week names to navigate views
+    editable: true,
+    eventLimit: true, // allow "more" link when too many events
+    events: [
+        {
+            title: '全天事件',
+            start: '2017-04-01'
+        },
+        {
+            title: '长事件',
+            start: '2017-04-07',
+            end: '2017-04-10'
+        },
+        {
+            id: 999,
+            title: '重复事件',
+            start: '2017-04-09T16:00:00'
+        },
+        {
+            id: 999,
+            title: '重复事件',
+            start: '2017-04-16T16:00:00'
+        },
+        {
+            title: '会议',
+            start: '2017-04-11',
+            end: '2017-04-13'
+        },
+        {
+            title: '会面',
+            start: '2017-04-12T10:30:00',
+            end: '2017-04-12T12:30:00'
+        },
+        {
+            title: '午餐',
+            start: '2017-04-12T12:00:00'
+        },
+        {
+            title: '会面',
+            start: '2017-04-12T14:30:00'
+        },
+        {
+            title: '换了时间',
+            start: '2017-04-12T17:30:00'
+        },
+        {
+            title: '晚餐',
+            start: '2017-04-12T20:00:00'
+        },
+        {
+            title: '生日聚会',
+            start: '2017-04-13T07:00:00'
+        },
+        {
+            title: '百度链接',
+            url: 'http://baidu.com/',
+            start: '2017-03-22'
+        }
+    ]
+});
+
+})
+
+$(".logo-info").hover(function(){
+    $(".tooltip-logo").toggleClass("tooltip-logo-show");
+});
+$(".nav-hide").click(function(){
+    sound.minimize.play();
+    $(".ui-main").addClass("ui-main-side-hide");
+    chartResize();
+    //$(".ui-side").addClass("zoomOutLeft animated");
+});
+$(".nav-show").click(function(){
+    sound.restore.play();
+    $(".ui-main").removeClass("ui-main-side-hide");
+    $(".ui-main").addClass("ui-main-side-showing");
+    chartResize();
+    $.timer.set("uiSide",function(){
+        $(".ui-main").removeClass("ui-main-side-showing");
+   },300);
+});
+
+$(".ui-maximize").click(function(){
+    sound.minimize.play();
+    $(".ui-main").addClass("ui-main-side-hide ui-main-header-hide");
+    chartResize();
+})
+
+$(".ui-restore").click(function(){
+    sound.restore.play();
+    $(".ui-main").removeClass("ui-main-side-hide ui-main-header-hide");
+    $(".ui-main").addClass("ui-main-side-showing ui-main-header-showing");
+    chartResize();
+    $.timer.set("uiSide",function(){
+        $(".ui-main").removeClass("ui-main-side-showing ui-main-header-showing");
+   },300);
+});
+
+</script>
+<script src="../lib/init/loadFiles-after.js"></script>
